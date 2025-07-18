@@ -2130,12 +2130,6 @@ textarea.w-input, textarea.w-select {
   display: block;
 }
 
-.w-layout-hflex {
-  flex-direction: row;
-  align-items: flex-start;
-  display: flex;
-}
-
 @media screen and (max-width: 991px) {
   .w-layout-blockcontainer {
     max-width: 728px;
@@ -3005,8 +2999,14 @@ blockquote {
 }
 
 .feature-right-area.three {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
   background-image: url("../images/frame-201618873012.webp");
-  padding: 38px 65px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  padding: 40px 65px;
+  display: block;
 }
 
 .feature-inner-boxes {
@@ -3037,6 +3037,7 @@ blockquote {
 }
 
 .feature-image {
+  background-color: #fff;
   border-radius: 24px;
 }
 
@@ -3336,8 +3337,11 @@ blockquote {
 }
 
 .cta-heading-wrapper {
+  box-sizing: border-box;
+  object-fit: fill;
   max-width: 476px;
   display: block;
+  position: static;
 }
 
 .footer-section {
@@ -3466,6 +3470,16 @@ blockquote {
 
 .paragraph, .paragraph-2, .paragraph-3, .paragraph-4 {
   text-align: justify;
+}
+
+.heading {
+  font-family: Dmsans, Arial, sans-serif;
+  font-weight: 400;
+}
+
+.columns {
+  flex: 1;
+  display: block;
 }
 
 @media screen and (min-width: 1280px) {
